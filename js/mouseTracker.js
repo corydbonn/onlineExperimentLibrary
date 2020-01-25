@@ -1,7 +1,7 @@
 //collection Area is the div id string; the dataCollectionObject is the javascript object containing 3 arrays for collecting data
 
 function mouseTrack(collectionArea) {
-    
+
 	//var domObject = document.getElementById(collectionArea); // select the DOM element indicated
 	var domObject = document.getElementById(collectionArea);
 	var dataCollectionObject = [];
@@ -11,7 +11,7 @@ function mouseTrack(collectionArea) {
 			dataCollectionObject.push({
 				xCoord: event.clientX, //push data to the collection arrays
 				yCoord: event.clientY,
-				timestamp: Date.now()
+				timestamp: Performance.now()
 			});
 		}
 	}
@@ -23,4 +23,3 @@ function mouseTrack(collectionArea) {
 		return dataCollectionObject;
 	}
 }
-
